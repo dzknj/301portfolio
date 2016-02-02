@@ -7,7 +7,7 @@ var data = [
   publishedOn: '12/12/2012'
 },
 
-/*
+
 {
 title: 'jersey',
 author: 'spaceman',
@@ -15,7 +15,7 @@ projectUrl: 'http://www.google.com',
 description: 'description description description',
 publishedOn: '9/13/2007'
 },
-*/
+
 
 {
   title: 'haggerton',
