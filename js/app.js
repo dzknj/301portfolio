@@ -14,13 +14,15 @@ var el2 = new ProjectItem('busmall','james', 'http://www.google.com', 'Test for 
 */
 
 ProjectItem.prototype.toHtml = function() {
-  var $newProjectList = $('section').clone();
+  var $newProjectList = $('article.template').clone();
+
+
 
   $newProjectList.find('h2').html(this.title);
 
-  $newProjectList.find('address').html(this.author);
+  $newProjectList.find('address').html('by' + this.author);
 
-  $newProjectList.find('time').html(this.publishedOn);
+  $newProjectList.find('time').html('published' + this.publishedOn);
 
   $newProjectList.append('<hr>');
 
