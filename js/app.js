@@ -16,7 +16,9 @@ var el2 = new ProjectItem('busmall','james', 'http://www.google.com', 'Test for 
 ProjectItem.prototype.toHtml = function() {
   var $newProjectList = $('article.template').clone();
 
-
+  $newProjectList.find('.readon').html('Keep Reading &raquo;')
+//finds .readon in my article template and puts text into html
+  $newProjectList.find('.description').html(this.description);
 
   $newProjectList.find('h2').html(this.title);
 
