@@ -6,14 +6,25 @@
     </title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
-<div class="header"></div>
+<div class="header">
+  <div id="calvinhobbes">
+    <img src="images.png">
+  </div>
+  <div id="headertitle">
+    <h3>The Portfolio of David Michael Zalk</h3>
+  </div>
+</div>
 <body>
   <p>Hello! My name is David Michael Zalk. Welcome to my portfolio!</p>
-  <ul>Here are links to my "Stuff"
-    <li><a href="https://www.facebook.com/dzalk201">My Facebook Page</a></li>
-    <li><a href="https://github.com/dzknj">My GitHub Page</a></li>
-  </ul>
-
+  <nav class="navbar">
+    <ul>Here are links to my "Stuff"
+      <li  class="tab" data-content="projects"><a href="#">Home</a></li>
+      <li class="tab" data-content"aboutme"><a href="#">About</a></li>
+      <li><a href="https://www.facebook.com/dzalk201">My Facebook Page</a></li>
+      <li><a href="https://github.com/dzknj">My GitHub Page</a></li>
+    </ul>
+    <hr>
+  </nav>
   <section id="portfolioList" class="template">
     <article class="template">
     <header>
@@ -23,18 +34,34 @@
         <time></time>
       </div>
     </header>
+    <footer class="description">
+    </footer>
+
+          <a href="#" class="readon"></a>
   </article>
   </section>
 
+<aside id="myinfo">
   <address>
+    <ul><h4>My Interests Are:</h4>
+      <li>Music</li>
+      <li>Coding</li>
+      <li>X-files</li>
+      <li>Calvin and Hobbes Comic</li>
+      <li>...and MANY more!!</li>
+      <li>E-mail me below to find out more.</li>
+    </ul>
   My E-mail address is 'dzknj@outlook.com'<br>
     <a href="mailto:dzknj@outlook.com">Click Here to E-mail me</a>
   </address>
-
+</aside>
   <script src="jquery-1.12.0.js"></script>
+  <script src="js/projectview.js"></script>
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
 
 </body>
-<div class="footer"><div>
+<div class="footer">
+<h1>Thank you for Visiting!!</h1>
+  </div>
 </html>
