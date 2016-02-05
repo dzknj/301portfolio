@@ -7,6 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script id="article-template" type="text/x-handlebars-template">
+
+          <article class="template">
+            <header>
+              <h2>{{title}}</h2>
+              <div class="byLine">
+                <address>{{author}}</address>
+                <time>{{publishedOn}}</time>
+              </div>
+            </header>
+            <footer class="description">{{{description}}}
+            </footer>
+
+                  <a href="#" class="readon">Keep Reading &raquo;</a>
+          </article>
+
+    </script>
   </head>
 <div class="header">
   <div id="calvinhobbes">
@@ -30,16 +48,7 @@
   <section id="portfolioList" class="template">
     <article class="template">
     <header>
-      <h2></h2>
-      <div class="byLine">
-        <address></address>
-        <time></time>
-      </div>
-    </header>
-    <footer class="description">
-    </footer>
 
-          <a href="#" class="readon"></a>
   </article>
   </section>
 
@@ -57,6 +66,7 @@
     <a href="mailto:dzknj@outlook.com">Click Here to E-mail me</a>
   </address>
 </aside>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
   <script src="jquery-1.12.0.js"></script>
   <script src="js/projectview.js"></script>
   <script src="js/data.js"></script>
