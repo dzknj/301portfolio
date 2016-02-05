@@ -31,9 +31,9 @@ ProjectItem.prototype.toHtml = function() {
 };
 
 data.forEach(function(ele) {
-  projects.push(new ProjectItem(ele))
+  projects.push(new ProjectItem(ele));
 });
 
 projects.forEach(function(a) {
-  $('section').append(a.toHtml())
+  $('section').append(a.toHtml());
 });
