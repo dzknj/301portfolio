@@ -9,9 +9,6 @@
 article {
   overflow: hidden;
 }​
-ul {
-  list-style-type: none;
-}
 .icon-home:before {
 	content: "\e908";
 }
@@ -63,6 +60,9 @@ a {
   border-radius: 10px;
   border: solid;
   border-width: 2px;
+}
+ul li {
+  list-style-type: none;
 }
 ul li a {
   text-decoration: none;

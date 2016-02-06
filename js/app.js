@@ -16,6 +16,11 @@ var el2 = new ProjectItem('busmall','james', 'http://www.google.com', 'Test for 
 ProjectItem.prototype.toHtml = function() {
   var template = Handlebars.compile($('#article-template').text());
 
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+  this.monthsAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/30/1000);
+
+  this.complete = this.daysAgo + ' days ago / ' + this.monthsAgo + ' months ago';
+
     return template(this);
 //   var $newProjectList = $('article.template').clone();
 //
