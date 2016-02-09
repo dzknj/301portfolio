@@ -39,7 +39,7 @@ ProjectItem.prototype.toHtml = function() {
 //   $newProjectList.removeClass('template');
 //   return $newProjectList;
 };
-
+ProjectItem.loadAll = function(data) {
 data.forEach(function(ele) {
   projects.push(new ProjectItem(ele))
 });
@@ -47,4 +47,19 @@ data.forEach(function(ele) {
 projects.forEach(function(a) {
   $('section').append(a.toHtml())
 });
-//git test
+};
+
+ProjectItem.fetchAllFromServer = function() {
+  console.log('fetching data from server');
+  $.ajax({
+    type: 'GET',
+    url: 'js/data.json',
+    success: function(data, message, xhr) {
+      localStorage.eTag = xhr.getResponseHeader('eTag');
+      ProjectItem.data = JSON.parse(data);
+      localStorage.data = JSON.stringify(data);
+    }
+  });
+};
+ProjectItem.fetchAllFromServer();
+ProjectItem.loadAll(ProjectItem.data);
