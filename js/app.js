@@ -39,28 +39,27 @@ ProjectItem.prototype.toHtml = function() {
 //   $newProjectList.removeClass('template');
 //   return $newProjectList;
 };
+
 ProjectItem.loadAll = function(data) {
-data.forEach(function(ele) {
-  projects.push(new ProjectItem(ele))
-});
+  data.forEach(function(ele) {
+    projects.push(new ProjectItem(ele));
+  });
 
-projects.forEach(function(a) {
-  $('section').append(a.toHtml())
-});
+  projects.forEach(function(a) {
+    $('section').append(a.toHtml())
+  });
 };
-
 ProjectItem.fetchAllFromServer = function() {
   console.log('fetching data from server');
   $.ajax({
-    async: false,
     type: 'GET',
     url: 'js/data.json',
     success: function(data, message, xhr) {
+      console.log(data);
       localStorage.eTag = xhr.getResponseHeader('eTag');
-      ProjectItem.data = JSON.parse(data);
+      ProjectItem.data = data;
       localStorage.data = JSON.stringify(data);
     }
   });
   ProjectItem.loadAll(ProjectItem.data);
 };
-ProjectItem.fetchAllFromServer();
