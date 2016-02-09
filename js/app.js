@@ -39,16 +39,16 @@ ProjectItem.prototype.toHtml = function() {
 //   $newProjectList.removeClass('template');
 //   return $newProjectList;
 };
+
 ProjectItem.loadAll = function(data) {
-data.forEach(function(ele) {
-  projects.push(new ProjectItem(ele))
-});
+  data.forEach(function(ele) {
+    projects.push(new ProjectItem(ele));
+  });
 
-projects.forEach(function(a) {
-  $('section').append(a.toHtml())
-});
+  projects.forEach(function(a) {
+    $('section').append(a.toHtml())
+  });
 };
-
 ProjectItem.fetchAllFromServer = function() {
   console.log('fetching data from server');
   $.ajax({
@@ -63,4 +63,3 @@ ProjectItem.fetchAllFromServer = function() {
   });
   ProjectItem.loadAll(ProjectItem.data);
 };
-ProjectItem.fetchAllFromServer();
