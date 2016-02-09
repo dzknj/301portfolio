@@ -52,12 +52,12 @@ projects.forEach(function(a) {
 ProjectItem.fetchAllFromServer = function() {
   console.log('fetching data from server');
   $.ajax({
-    async: false,
     type: 'GET',
     url: 'js/data.json',
     success: function(data, message, xhr) {
+      console.log(data);
       localStorage.eTag = xhr.getResponseHeader('eTag');
-      ProjectItem.data = JSON.parse(data);
+      ProjectItem.data = data;
       localStorage.data = JSON.stringify(data);
     }
   });
