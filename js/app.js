@@ -52,6 +52,7 @@ projects.forEach(function(a) {
 ProjectItem.fetchAllFromServer = function() {
   console.log('fetching data from server');
   $.ajax({
+    async: false,
     type: 'GET',
     url: 'js/data.json',
     success: function(data, message, xhr) {
@@ -60,6 +61,6 @@ ProjectItem.fetchAllFromServer = function() {
       localStorage.data = JSON.stringify(data);
     }
   });
+  ProjectItem.loadAll(ProjectItem.data);
 };
 ProjectItem.fetchAllFromServer();
-ProjectItem.loadAll(ProjectItem.data);
