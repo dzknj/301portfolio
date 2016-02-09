@@ -41,6 +41,7 @@ ProjectItem.prototype.toHtml = function() {
 };
 
 ProjectItem.loadAll = function(data) {
+  console.log(data);
   data.forEach(function(ele) {
     projects.push(new ProjectItem(ele));
   });
@@ -59,7 +60,7 @@ ProjectItem.fetchAllFromServer = function() {
       localStorage.eTag = xhr.getResponseHeader('eTag');
       ProjectItem.data = data;
       localStorage.data = JSON.stringify(data);
+      ProjectItem.loadAll(ProjectItem.data);
     }
   });
-  ProjectItem.loadAll(ProjectItem.data);
 };
