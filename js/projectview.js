@@ -1,7 +1,17 @@
+
+(function(module){
+
 var projectView = {};
 
+projectView.initPage = function() {
+  projects.forEach(function(a) {
+    $('section').append(a.toHtml())
+  });
+}
+
 projectView.handleNavBar = function() {
-  $('.navbar .tab').on('click', function(event) {
+  $('.navbar .tab').on('click', function() {
+    console.log('BOOYAH')
     $('#myinfo, #portfolioList').hide();
 var $datacontent = $(this).data('content');
 $('#' + $datacontent).fadeIn(200);
@@ -44,3 +54,5 @@ $(document).ready(function() {
 projectView.handleNavBar();
 projectView.readOn();
 });
+module.projectView = projectView;
+})(window);

@@ -1,4 +1,7 @@
-var projects = [];
+
+(function(module){
+
+projects = [];
 
 function ProjectItem(obj) {
   this.title = obj.title;
@@ -6,6 +9,7 @@ function ProjectItem(obj) {
   this.projectUrl = obj.projectUrl;
   this.description = obj.description;
   this.publishedOn = obj.publishedOn;
+  this.boot = obj.boot;
 };
 
 /*
@@ -41,26 +45,42 @@ ProjectItem.prototype.toHtml = function() {
 };
 
 ProjectItem.loadAll = function(data) {
-  console.log(data);
-  data.forEach(function(ele) {
-    projects.push(new ProjectItem(ele));
-  });
 
-  projects.forEach(function(a) {
-    $('section').append(a.toHtml())
+
+  projects = data.map(function(stuff) {
+    console.log(data);
+    console.log(stuff);
+    return new ProjectItem(stuff);
+  })
+  var boot = data.map(function(a){
+    return parseInt(a.boot);
+  })
+  var bootTotal = boot.reduce(function(a,b){
+    return a + b;
   });
+  console.log(boot);
+  console.log(bootTotal);
+  $('.footer').append(' There are ' + bootTotal + ' boots total in this biznatch!! ');
+  // data.forEach(function(ele) {
+  //   projects.push(new ProjectItem(ele));
+  // });
+
+
 };
-ProjectItem.fetchAllFromServer = function() {
+ProjectItem.fetchAllFromServer = function(callback) {
   console.log('fetching data from server');
   $.ajax({
     type: 'GET',
     url: 'js/data.json',
     success: function(data, message, xhr) {
-      console.log(data);
+
       localStorage.eTag = xhr.getResponseHeader('eTag');
       ProjectItem.data = data;
       localStorage.data = JSON.stringify(data);
       ProjectItem.loadAll(ProjectItem.data);
+      callback();
     }
   });
 };
+module.ProjectItem = ProjectItem;
+})(window);
