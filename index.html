@@ -14,7 +14,7 @@
             <header>
               <h2>{{title}}</h2>
               <div class="byLine">
-                <address>By {{author}}</address>
+                <address>By {{author}} {{boot}}</address>
                 <time>Created on {{publishedOn}} / {{complete}}</time>
               </div>
             </header>
@@ -71,7 +71,7 @@
   <!-- <script src="js/data.js"></script> -->
   <script src="js/app.js"></script>
   <script>
-  ProjectItem.fetchAllFromServer();
+  ProjectItem.fetchAllFromServer(projectView.initPage);
   </script>
 
 </body>
