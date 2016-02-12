@@ -19,24 +19,8 @@ $('#' + $datacontent).fadeIn(200);
   $('.navbar .tab:first').click();
 };
 
-//   $('.navbar .tab:last').on('click',  function() {
-//     var $projectHide = $('.template');
-//     var $aboutHide = $('#myinfo');
-//
-//     $projectHide.hide();
-//     $aboutHide.show();
-//   });
-//   $('.navbar .tab:first').on('click', function() {
-//     var $aboutHide = $('#myinfo');
-//     var $projectHide = $('.template');
-//
-//     $aboutHide.hide();
-//     $projectHide.show();
-//   });
-// };
-
 projectView.readOn = function() {
-  $('footer.description *:nth-of-type(n+3)').hide();
+  $('div.description *:nth-of-type(n+3)').hide();
 
   $('article').on('click', '.readon', function(event) {
     event.preventDefault();

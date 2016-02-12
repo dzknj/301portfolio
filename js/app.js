@@ -12,10 +12,7 @@ function ProjectItem(obj) {
   this.boot = obj.boot;
 };
 
-/*
-var el = new ProjectItem('busmall','david zalk', 'http://www.google.com', 'Test for placing projects in my webpage', '12/12/2012');
-var el2 = new ProjectItem('busmall','james', 'http://www.google.com', 'Test for placing projects in my webpage', '12/12/2012');
-*/
+// removed old commented code
 
 ProjectItem.prototype.toHtml = function() {
   var template = Handlebars.compile($('#article-template').text());
@@ -26,22 +23,9 @@ ProjectItem.prototype.toHtml = function() {
   this.complete = this.daysAgo + ' days ago / ' + this.monthsAgo + ' months ago';
 
     return template(this);
-//   var $newProjectList = $('article.template').clone();
-//
-//   $newProjectList.find('.readon').html('Keep Reading &raquo;')
-// //finds .readon in my article template and puts text into html
-//   $newProjectList.find('.description').html(this.description);
-//
-//   $newProjectList.find('h2').html(this.title);
-//
-//   $newProjectList.find('address').html('by' + this.author);
-//
-//   $newProjectList.find('time').html('published' + this.publishedOn);
-//
-//   $newProjectList.append('<hr>');
-//
-//   $newProjectList.removeClass('template');
-//   return $newProjectList;
+
+    // removed old code
+
 };
 
 ProjectItem.loadAll = function(data) {
