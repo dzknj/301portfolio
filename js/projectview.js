@@ -7,6 +7,7 @@
     projects.forEach(function(a) {
       $('section').append(a.toHtml());
     });
+    projectView.readOn();
   };
 
   // projectView.handleNavBar = function() {
