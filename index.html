@@ -38,8 +38,8 @@
   <p>Hello! My name is David Michael Zalk. Welcome to my portfolio!</p>
   <nav class="navbar">
     <ul>
-      <li  class="tab" data-content="portfolioList"><a href="#" class="icon-home"> Home</a></li>
-      <li class="tab" data-content="myinfo"><a href="#" class="icon-address-book"> About</a></li>
+      <li  class="tab" data-content="portfolioList"><a href="/" class="icon-home"> Home</a></li>
+      <li class="tab" data-content="myinfo"><a href="/cool" class="icon-address-book"> About</a></li>
       <li><a href="https://www.facebook.com/dzalk201" class="icon-rocket"> My Facebook Page</a></li>
       <li><a href="https://github.com/dzknj" class="icon-github"> My GitHub Page</a></li>
     </ul>
@@ -67,8 +67,16 @@
 </aside>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
   <script src="jquery-1.12.0.js"></script>
+
+  <script src="js/page.js"></script>
+
   <script src="js/projectview.js"></script>
   <script src="js/app.js"></script>
+
+  <script src="js/aboutcontroller.js"></script>
+  <script src="js/projectcontroller.js"></script>
+  <script src="js/routes.js"></script>
+
   <script>
   ProjectItem.fetchAllFromServer(projectView.initPage);
   </script>
