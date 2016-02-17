@@ -36,7 +36,6 @@
   };
 
   $(document).ready(function() {
-    projectView.handleNavBar();
     projectView.readOn();
   });
   module.projectView = projectView;

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'motionpicture';
-  src: url('../MotionPicture_PersonalUseOnly.ttf');
+  src: url('../fonts/MotionPicture_PersonalUseOnly.ttf');
 }
 @font-face {
   font-family: 'days';
-  src: url('../days.ttf');
+  src: url('../fonts/days.ttf');
 }
 .repodescription {
   background-color: rgba(0,0,0);
@@ -50,7 +50,7 @@ article {
 }
 body {
   background-color: lightgrey;
-  background-image: url('../chbody.jpg');
+  background-image: url('../images/chbody.jpg');
 }
 .readon {
   color: blue;
