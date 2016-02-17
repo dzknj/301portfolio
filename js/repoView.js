@@ -10,7 +10,13 @@
 
   // DONE: How do you want to render a single repo as html? Return your filled in HTML template.
   var render = function(repo) {
-    return '<ul class="reporepo"><li><a class="repolinks" href="' + repo.clone_url + '">' + repo.name + '</a> - <span class="repodate">Created On: ' + repo.created_at + '</span><ul><li class="repodescription">'+ repo.description + '</li></ul></br></li></ul>';
+    var date = [];
+    date = repo.created_at;
+    var newDate = date.slice(0,10);
+    var newTime = date.slice(11,16);
+    console.log(newDate);
+    console.log(newTime);
+    return '<ul class="reporepo"><li><a class="repolinks" href="' + repo.clone_url + '">' + repo.name + '</a> - <span class="repodate">Created On: ' + newDate + ' at ' + newTime + ' O\'clock</span><ul><li class="repodescription">'+ repo.description + '</li></ul></br></li></ul>';
   };
 
   // DONE: If all the data is loaded, we can prep the UI and render the repos.
