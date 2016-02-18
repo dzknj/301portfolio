@@ -10,16 +10,6 @@
     projectView.readOn();
   };
 
-  // projectView.handleNavBar = function() {
-  //   $('.navbar .tab').on('click', function() {
-  //     console.log('BOOYAH');
-  //     $('#myinfo, #portfolioList').hide();
-  //     var $datacontent = $(this).data('content');
-  //     $('#' + $datacontent).fadeIn(200);
-  //   });
-  //   $('.navbar .tab:first').click();
-  // };
-
   projectView.readOn = function() {
     $('div.description *:nth-of-type(n+3)').hide();
 

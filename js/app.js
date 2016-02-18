@@ -32,8 +32,6 @@
 
 
     projects = data.map(function(stuff) {
-      console.log(data);
-      console.log(stuff);
       return new ProjectItem(stuff);
     });
     var boot = data.map(function(a){
@@ -42,13 +40,7 @@
     var bootTotal = boot.reduce(function(a,b){
       return a + b;
     });
-    console.log(boot);
-    console.log(bootTotal);
     $('.footer').append(' There are ' + bootTotal + ' boots total in this biznatch!! ');
-  // data.forEach(function(ele) {
-  //   projects.push(new ProjectItem(ele));
-  // });
-
 
   };
   ProjectItem.fetchAllFromServer = function(callback) {
@@ -62,6 +54,8 @@
         ProjectItem.data = data;
         localStorage.data = JSON.stringify(data);
         ProjectItem.loadAll(ProjectItem.data);
+        console.log('status text of data.json request: ' + xhr.statusText);
+        console.log('status code of data.json request: ' + xhr.status);
         callback();
       }
     });
