@@ -3,17 +3,22 @@
 
   repos.all = [];
 
-  repos.requestRepos = function(next) {
-
-    $.ajax({
-      url: 'https://api.github.com/users/dzknj/repos',
-      type: 'GET',
-      headers: {'Authorization':'token ' + githubToken},
-      success: function(data, message, xhr) {
-        console.log(data);
+  // repos.requestRepos = function(next) {
+  //   $.ajax({
+  //     url: 'https://api.github.com/users/dzknj/repos',
+  //     type: 'GET',
+  //     headers: {'Authorization':'token ' + githubToken},
+  //     success: function(data, message, xhr) {
+  //       console.log(data);
+  //       repos.all = data;
+  //     }
+  //   }).done(next);
+  // };
+  repos.requestRepos = function(callback) {
+    console.log('BOOYAH MUTHAFUCKA!!!');
+    $.get('/github/users/dzknj/repos?sort=updated', function(data, message, xhr) {
         repos.all = data;
-      }
-    }).done(next);
+      }).done(callback);
   };
 
   // DONE: Model method that filters the full collection for repos with a particular attribute.
