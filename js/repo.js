@@ -3,17 +3,11 @@
 
   repos.all = [];
 
-  repos.requestRepos = function(next) {
-
-    $.ajax({
-      url: 'https://api.github.com/users/dzknj/repos',
-      type: 'GET',
-      headers: {'Authorization':'token ' + githubToken},
-      success: function(data, message, xhr) {
-        console.log(data);
-        repos.all = data;
-      }
-    }).done(next);
+  repos.requestRepos = function(callback, callback2) {
+    console.log('request repos location');
+    $.get('/github/users/dzknj/repos?sort=updated', function(data, message, xhr) {
+      repos.all = data;
+    }).done(callback, callback2);
   };
 
   // DONE: Model method that filters the full collection for repos with a particular attribute.
