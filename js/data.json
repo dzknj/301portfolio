@@ -5,7 +5,8 @@
   "projectUrl": "http://www.google.com",
   "description": "<p>description description description</p><p>Bacon ipsum dolor amet do <img src=\"images/calvinpanel.jpg\" class=\"pullright\"> ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. Officia landjaeger minim, tenderloin salami ribeye cupidatat. Consequat reprehenderit shank nostrud proident shoulder mollit flank. Excepteur quis occaecat kevin officia, ribeye sausage chuck et pig.</p><p>Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. Officia landjaeger minim, tenderloin salami ribeye cupidatat. Consequat reprehenderit shank nostrud proident shoulder mollit flank. Excepteur quis occaecat kevin officia, ribeye sausage chuck et pig.</p>",
   "boot": "5",
-  "publishedOn": "12/12/2012"
+  "publishedOn": "12/12/2012",
+  "readon": "<a href='/project/1' class='readon'>Keep Reading &raquo;</a>"
 },
 
 
@@ -15,7 +16,8 @@
 "projectUrl": "http://www.google.com",
 "description": "<p>description description description</p><p><img src=\"images/calvinpanel2.jpg\" class=\"pullleft\"> Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. Officia landjaeger minim, tenderloin salami ribeye cupidatat. Consequat reprehenderit shank nostrud proident shoulder mollit flank. Excepteur quis occaecat kevin officia, ribeye sausage chuck et pig.</p><p>Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. Officia landjaeger minim, tenderloin salami ribeye cupidatat. Consequat reprehenderit shank nostrud proident shoulder mollit flank. Excepteur quis occaecat kevin officia, ribeye sausage chuck et pig.</p>",
 "boot": "5",
-"publishedOn": "9/13/2007"
+"publishedOn": "9/13/2007",
+"readon": "<a href='/project/2' class='readon'>Keep Reading &raquo;</a>"
 },
 
 
@@ -25,6 +27,7 @@
   "projectUrl": "http://www.google.com",
   "description": "<p>description description description</p><p>Bacon ipsum dolor amet do<img src=\"images/calvinpanel3.jpg\" class=\"pullright\"> ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. Officia landjaeger minim, tenderloin salami ribeye cupidatat. Consequat reprehenderit shank nostrud proident shoulder mollit flank. Excepteur quis occaecat kevin officia, ribeye sausage chuck et pig.</p><p>Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. Officia landjaeger minim, tenderloin salami ribeye cupidatat. Consequat reprehenderit shank nostrud proident shoulder mollit flank. Excepteur quis occaecat kevin officia, ribeye sausage chuck et pig.</p>",
   "boot": "5",
-  "publishedOn": "11/11/2011"
+  "publishedOn": "11/11/2011",
+  "readon": "<a href='/project/3' class='readon'>Keep Reading &raquo;</a>"
 }
 ]
