@@ -7,13 +7,13 @@
     projects.forEach(function(a) {
       $('section').append(a.toHtml());
     });
-    projectView.readOn();
+    $('div.description *:nth-of-type(n+3)').hide();
   };
 
   projectView.readOn = function() {
     $('div.description *:nth-of-type(n+3)').hide();
 
-    $('article').on('click', '.readon', function(event) {
+    $('article').on('click', '.readonbutton', function(event) {
       event.preventDefault();
       console.log('It works!!');//testing to see if function works
       console.log(this); //logs .readon because this is readon

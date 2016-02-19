@@ -19,8 +19,10 @@
             </header>
             <div  class="description">{{{description}}}
             </div>
-
-                  <a href="#" class="readon">Keep Reading &raquo;</a>
+            <div class="readonbutton">
+              {{{readon}}}
+            </div>
+                  <!-- <a href="#" class="readon">Keep Reading &raquo;</a> -->
           </article>
 
     </script>
@@ -67,8 +69,9 @@
   </address>
 </aside>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
-  <script src="js/jquery-1.12.0.js"></script>
-
+  <script src="js/jquery-2.1.4.js"></script>
+  <script src="js/html5sql.js"></script>
+  <script src="js/webdb.js"></script>
   <script src="js/page.js"></script>
 
   <script src="js/githubtoken.js"></script>
@@ -86,6 +89,7 @@
 
   <script>
   ProjectItem.fetchAllFromServer(projectView.initPage);
+  ProjectItem.fetchAll();
   </script>
 
 </body>
